@@ -1,12 +1,10 @@
 const express = require('express');
-const userController = require('../controllers/userController');
+const thoughtController = require('../controllers/thoughtController');
 
 const router = express.Router();
 
-
-router.get('/users', userController.getAllUsers);
-router.get('/users/:id', userController.getUserById);
-router.post('/users', userController.createUser);;
-
+router.get('/thoughts', thoughtController.getAllThoughts);
+router.get('/thoughts/:id', thoughtController.getThoughtById);
+router.post('/thoughts', thoughtController.createThought);
 
 module.exports = router;
